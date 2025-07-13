@@ -37,9 +37,7 @@ outputs:
         - gcc_linux-64
         - gcc_linux-aarch64
         - gcc_linux-ppc64le
-        # https://github.com/prefix-dev/rattler-build/issues/1445
-        # TODO: replace with the following line once the issue is resolved
-        # - ${{ compiler('cxx') }}
+        - ${{ compiler('cxx') }}
       build:
         - ${{ stdlib('c') }}
         - ${{ compiler('c') }}
@@ -84,9 +82,7 @@ outputs:
         - gcc_linux-64
         - gcc_linux-aarch64
         - gcc_linux-ppc64le
-        # https://github.com/prefix-dev/rattler-build/issues/1445
-        # TODO: replace with the following line once the issue is resolved
-        # - ${{ compiler('cxx') }}
+        - ${{ compiler('cxx') }}
       run_exports:
         - ${{ pin_subpackage('libltdl', upper_bound='x.x') }}
       build:
